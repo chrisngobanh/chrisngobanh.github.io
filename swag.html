@@ -40,7 +40,14 @@
             rel: 0,
             showinfo: 0,
           },
+          events: {
+            onReady: autoplayVid,
+          }
         });
+      }
+
+      function autoplayVid(event) {
+        event.target.playVideo();
       }
     </script>
   </body>
