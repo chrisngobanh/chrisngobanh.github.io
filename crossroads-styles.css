@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300i,400,700');
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+header {
+  padding: 0.5em 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+}
+
+.title > a {
+  color: black;
+  text-decoration: none;
+}
+
+.title > a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.container > iframe {
+  margin: 3em 0;
+}
+
+.tracklist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 100vw;
+  }
+
+  .container > iframe {
+    margin: 1em 0;
+  }
+
+  .tracklist {
+    display: block;
+  }
+
+  .tracklist > div > ol {
+    text-align: center;
+  }
+
+  .track {
+    display: block;
+  }
+}
+
+.tracklist > div {
+  flex: 1;
+  margin: 0 0.5em;
+}
+
+.tracklist > div > ol {
+  padding-left: 1em;
+  margin: 0;
+}
+
+.track {
+  margin-top: 0.35em;
+  font-size: 0.9em;
+}
+
+span.smol {
+  font-size: 0.75em;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 1em;
+  display: block;
+}
+
+footer {
+  padding: 0.35em;
+  font-weight: 800;
+}
