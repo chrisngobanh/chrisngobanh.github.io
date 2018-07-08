@@ -18,12 +18,12 @@ header {
   margin: 0;
 }
 
-.title > a {
+a {
   color: black;
   text-decoration: none;
 }
 
-.title > a:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -90,4 +90,5 @@ span.smol {
 footer {
   padding: 0.35em;
   font-weight: 800;
+  text-align: right;
 }
