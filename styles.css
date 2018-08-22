@@ -18,12 +18,12 @@ header {
   margin: 0;
 }
 
-.title > a {
+a {
   color: black;
   text-decoration: none;
 }
 
-.title > a:hover {
+a:hover {
   text-decoration: underline;
 }
 
@@ -38,9 +38,45 @@ header {
 }
 
 .tracklist {
-  display: flex;
-  flex-wrap: wrap;
+  column-count: 2;
+  margin: 0 0em;
+  padding: 0em;
+  counter-reset: item;
 }
+
+.tracklist > li {
+  margin: 0;
+  padding: 0 0 0 1em;
+  text-indent: -1em;
+  list-style-type: none;
+  counter-increment: item;
+  margin-top: 0.35em;
+  font-size: 0.9em;
+}
+
+.tracklist > li:before {
+  display: inline-block;
+  width: 1em;
+  padding-right: 0.5em;
+  font-weight: bold;
+  text-align: right;
+  content: counter(item) ".";
+}
+
+span.smol {
+  font-size: 0.75em;
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 2em;
+  display: block;
+}
+
+footer {
+  padding: 0.35em;
+  font-weight: 800;
+  text-align: right;
+}
+
 
 @media screen and (max-width: 800px) {
   .container {
@@ -52,42 +88,15 @@ header {
   }
 
   .tracklist {
-    display: block;
+    column-count: 1;
   }
 
-  .tracklist > div > ol {
-    text-align: center;
+  .tracklist > ol > li:before {
+    width: 2em;
+    padding-right: 0.5em;
   }
 
-  .track {
-    display: block;
+  span.smol {
+    margin-left: 3em;
   }
-}
-
-.tracklist > div {
-  flex: 1;
-  margin: 0 0.5em;
-}
-
-.tracklist > div > ol {
-  padding-left: 1em;
-  margin: 0;
-}
-
-.track {
-  margin-top: 0.35em;
-  font-size: 0.9em;
-}
-
-span.smol {
-  font-size: 0.75em;
-  font-weight: 300;
-  font-style: italic;
-  margin-left: 1em;
-  display: block;
-}
-
-footer {
-  padding: 0.35em;
-  font-weight: 800;
 }
